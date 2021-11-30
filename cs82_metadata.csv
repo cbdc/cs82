@@ -1,0 +1,57 @@
+# %ECSV 0.9
+# ---
+# datatype:
+# - {name: colname, datatype: string}
+# - {name: description, datatype: string}
+# - {name: unit, datatype: string}
+# - {name: ucd, datatype: string}
+# - {name: dtype, datatype: string}
+# - {name: nil, datatype: string}
+#
+# meta: !!omap
+# - description: >
+#    CS82 project carried a series of observation using the 'i' filter
+#    of the CFHTelescope covering the Stripe82 as deep as mag=23(i).
+#
+colname                  description                                                unit ucd                                   dtype    nil
+OBJID                    "ObjectID ($index)"                                        "" meta.id;meta.main                       int64    ""
+SE_ID                    "Object ID per image"                                      "" meta.number                             int32 ""
+IM_NUM                   "Image ID"                                                 "" ""                                      int16 ""
+ALPHA_J2000              "Right ascension of barycenter (J2000)"                    deg pos.eq.ra;meta.main                    float64 ""
+DELTA_J2000              "Declination of barycenter (J2000)"                        deg pos.eq.dec;meta.main                   float64 ""
+ALPHAPSF_J2000           "Right ascension of the fitted PSF (J2000)"                deg pos.eq.ra                              float64 ""
+DELTAPSF_J2000           "Declination of the fitted PSF (J2000)"                    deg pos.eq.dec                             float64 ""
+ALPHAMODEL_J2000         "Fitted position along right ascension (J2000)"            deg pos.eq.ra                              float64 ""
+DELTAMODEL_J2000         "Fitted position along declination (J2000)"                deg pos.eq.dec                             float64 ""
+MAG_AUTO                 "Kron-like elliptical aperture magnitude filter i"         mag phot.mag;em.opt.I;meta.main            float32 ""
+MAGERR_AUTO              "RMS error for AUTO magnitude filter i"                    mag stat.error;phot.mag;em.opt.I;meta.main float32 ""
+MAG_APER                 "Fixed aperture magnitude vector filter i"                 mag phot.mag;em.opt.I                      float32 ""
+MAGERR_APER              "RMS error vector for fixed aperture mag filter i"         mag stat.error;phot.mag;em.opt.I           float32 ""
+MAG_PSF                  "Magnitude from PSF-fitting filter i"                      mag phot.mag;em.opt.I                      float32 ""
+MAGERR_PSF               "RMS magnitude error from PSF-fitting filter i"            mag stat.error;phot.mag;em.opt.I           float32 ""
+MAG_MODEL                "Magnitude from model-fitting filter i"                    mag phot.mag;em.opt.I                      float32 ""
+MAGERR_MODEL             "RMS error on model-fitting magnitude filter i"            mag stat.error;phot.mag;em.opt.I           float32 ""
+CLASS_STAR               "Star/Galaxy classifier index"                             ""  src.class.starGalaxy                   float32 ""
+FLUX_RADIUS              "Fraction-of-light radii"                                  pixel ""                                   float32 ""
+FWHM_WORLD               "Full Width Half Maximum"                                  pixel ""                                   float32 ""
+EASY_ZPHOT_FAINT         "" "" ""                                                                                              float32 ""
+FLAGS                    "Extraction flags"                                         "" meta.code.qual                          int16 ""
+FLAGS_MODEL              "Model-fitting flags"                                      "" ""                                      uint8 ""
+FLUX_PSF                 "Flux from PSF-fitting"                                    count ""                                   float32 ""
+FLUXERR_PSF              "RMS flux error for PSF-fitting"                           count ""                                   float32 ""
+FLUX_MODEL               "Flux from model-fitting"                                  count ""                                   float32 ""
+FLUXERR_MODEL            "RMS error on model-fitting flux"                          count ""                                   float32 ""
+CHI2_PSF                 "Reduced chi2 from PSF-fitting"                            "" ""                                      float32 ""
+CHI2_MODEL               "Reduced Chi2 of the fit"                                  "" ""                                      float32 ""
+MU_MAX_MODEL             "Peak model surface brightness above background"           "mag * arcsec**(-2)" ""                    float32 ""
+MU_EFF_MODEL             "Effective model surface brightness above background"      "mag * arcsec**(-2)" ""                    float32 ""
+MU_MEAN_MODEL            "Mean effective model surface brightness above background" "mag * arcsec**(-2)" ""                    float32 ""
+SPREAD_MODEL             "Spread parameter from model-fitting"                      "" ""                                      float32 ""
+SPREADERR_MODEL          "Spread parameter error from model-fitting"                "" ""                                      float32 ""
+SPHEROID_REFF_WORLD      "Spheroid effective radius from fitting"                   deg ""                                     float32 ""
+SPHEROID_REFFERR_WORLD   "RMS error on fitted spheroid effective radius"            deg ""                                     float32 ""
+SPHEROID_ASPECT_WORLD    "Spheroid aspect ratio from fitting"                       "" ""                                      float32 ""
+SPHEROID_ASPECTERR_WORLD "RMS error on fitted spheroid aspect ratio"                "" ""                                      float32 ""
+SPHEROID_THETA_WORLD     "Spheroid position angle (CCW/world-x)"                    deg ""                                     float32 ""
+SPHEROID_THETAERR_WORLD  "RMS error on spheroid position angle"                     deg ""                                     float32 ""
+SPMOD_STAR               "" "" ""                                                                                              int16 ""
